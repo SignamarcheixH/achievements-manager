@@ -2,19 +2,19 @@ achievements = [
   {
     "achievementName": "Achievement 1",
     "achievementDescription": "You clicked on first button !",
-    "achievementImagePath": "",
+    "achievementImagePath": "/resources/click.png",
     "triggerName": "ACHIEVEMENT_1",
   },
   {
     "achievementName": "Achievement 2",
     "achievementDescription": "You clicked on second button !",
-    "achievementImagePath": "",
+    "achievementImagePath": "/resources/click.png",
     "triggerName": "ACHIEVEMENT_2",
   },
   {
-    "achievementName": "Le clicker fou ",
+    "achievementName": "Mad clicker ",
     "achievementDescription": "You clicked on any button ten times !",
-    "achievementImagePath": "",
+    "achievementImagePath": "/resources/click.png",
     "triggerName": "ACHIEVEMENT_3",
   },
 ]

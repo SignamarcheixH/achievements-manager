@@ -14,7 +14,7 @@ function isCompleted(achievement) { return achievement.isCompleted }
 
 function unlockAchievement(achievement) {
 	let modal = document.getElementsByClassName('achievement-container')[0];
-	let newAchievement = createHTMLModal(achievement.achievementName, achievement.achievementDescription);
+	let newAchievement = createHTMLModal(achievement.achievementName, achievement.achievementDescription, achievement.achievementImagePath);
 	modal.appendChild(newAchievement);
 	achievement.isCompleted = true;
 	updateAchievementCollection(achievement);
@@ -29,7 +29,7 @@ function updateAchievementCollection(achievement) {
 	achievements_r[index] = achievement;
 }
 
-function createHTMLModal(title, description) {
+function createHTMLModal(title, description, imagePath) {
 	let h2 = document.createElement("h2");
 	let titleText = document.createTextNode(title);
 	h2.className = "title";
@@ -39,6 +39,7 @@ function createHTMLModal(title, description) {
 	div.className = "desc"
 	div.appendChild(desc);
 	let img = document.createElement("img")
+	img.setAttribute('src', imagePath)
 	let infos = document.createElement("div");
 	infos.appendChild(h2);
 	infos.appendChild(div)
@@ -89,7 +90,6 @@ document.addEventListener('DOMContentLoaded',() => {
   	for(let i of buttons) {
   		i.addEventListener('click', () => {
 	  		click += 1
-	  		console.log(click);
 	  		if(click == 10) { document.dispatchEvent(findEventBySlug('ACHIEVEMENT_3'))}
   		})
   	}
